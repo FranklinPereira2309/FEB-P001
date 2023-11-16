@@ -5,10 +5,15 @@
     grid-template-columns: 1fr 1fr 20%;
     gap: 10px 5px;
     text-align: center;
+    font-family: 'Roboto Flex', sans-serif;
 }
-
+h1, h2, h3 {
+    font-family: 'Nunito Sans', sans-serif;
+}
 span {
     background-color: lightcyan;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
 }
 
 header {
@@ -45,6 +50,7 @@ nav {
     background-color: orange;
     grid-row: 5 /8;
     grid-column: 1 /2;   
+    
 }
 
 .resultados {
