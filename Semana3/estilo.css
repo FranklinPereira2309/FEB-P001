@@ -9,17 +9,15 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    min-width: none;
-
+    
 }
 
 .container-destinos {
     display: flex;
-    flex-wrap: wrap;
-    display: flex;
-    gap: 20px;    
+    justify-content: center;
+    gap: 20px;   
+    
 }
-
 
 .roteiros-viagens {
     display: flex;
@@ -28,6 +26,9 @@ body {
     flex-direction: column;
     padding: 20px;
     border-radius: 10px;
+    font-family: 'Roboto Serif', serif;
+    
+    
 }
 
 .roteiro-destino {
@@ -35,9 +36,8 @@ body {
     justify-content: flex-start;
     color: #7639BF;
     font-weight: bold;
-    margin-bottom: 20px;
-    
-    
+    margin-bottom: 20px;  
+    font-family: 'Fjalla One', sans-serif;
 }
 
 img {
@@ -49,8 +49,9 @@ img {
 
 ul {
     list-style-image: url('./assets/imgs/checkmark.svg');
-    color: #7639BF;    
+      
 }
+
 button {
     width: 70px;
     background-color: #8FD620;
@@ -68,24 +69,20 @@ button {
     max-width:120px;
     display: flex;
     flex-direction: column;
-    
+    color: #7639BF;  
     padding-left: 30px;
     
 }
 
 
-.roteiro-incluso {
-
-}
-
 .roteiro-preco {
-    color: #7639BF;
+    color: #3c087a;
     font-weight: 900;
     margin-top: 20px;
 }
 
 .roteiro-obs {
-    color: #7639BF;
+    color: #2a025c;
     font-size: 10px;
     text-align: center;
 }
@@ -96,3 +93,10 @@ button {
     text-align: center;
 }
 
+@media (max-width:1200px)  {
+    .container-destinos {
+        flex-wrap: wrap;
+        width: 200px;
+                 
+    }
+}
