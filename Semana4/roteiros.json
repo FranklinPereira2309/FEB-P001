@@ -1,0 +1,29 @@
+[
+  {
+    "destino": "Salvador",
+    "preco": "R$670,00",
+    "inclusoes": [
+      "Áereo ida e volta",
+      "03 diárias",
+      "Café da Manhã"
+    ]
+  },
+  {
+    "destino": "Fortaleza",
+    "preco": "R$1513,00",
+    "inclusoes": [
+      "Áereo ida e volta",
+      "06 diárias",
+      "Café da Manhã"
+    ]
+  },
+  {
+    "destino": "Campinas",
+    "preco": "R$900,00",
+    "inclusoes": [
+      "Áereo ida e volta",
+      "04 diárias",
+      "Café da Manhã"
+    ]
+  }
+]

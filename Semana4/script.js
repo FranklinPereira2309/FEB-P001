@@ -8,9 +8,9 @@ document.addEventListener("DOMContentLoaded", function () {
         
         const roteiros = [];
   
-        
+       
         containerDestinos.querySelectorAll(".roteiros-viagens").forEach((roteiro) => {
-          // Captura as informações do roteiro
+          
           const destino = roteiro.querySelector(".roteiro-destino").textContent;
           const preco = roteiro.querySelector(".roteiro-preco").textContent;
   
@@ -26,7 +26,18 @@ document.addEventListener("DOMContentLoaded", function () {
         });
   
         
-        console.log(roteiros);
+        const roteirosJSON = JSON.stringify(roteiros, null, 2);
+  
+        
+        console.log(roteirosJSON);
+  
+        
+        const blob = new Blob([roteirosJSON], { type: "application/json" });
+  
+        // const link = document.createElement("a");
+        // link.href = window.URL.createObjectURL(blob);
+        // link.download = "roteiros.json";
+        // link.click();
       }
   
       
