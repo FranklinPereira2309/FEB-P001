@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    
+}
+
+.container-destinos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;   
+    
+}
+
+.roteiros-viagens {
+    display: flex;
+    align-items: center;
+    background-color: #E5D4FF;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    font-family: 'Roboto Serif', serif;
+    
+    
+}
+
+.roteiro-destino {
+    display: flex;
+    justify-content: flex-start;
+    color: #7639BF;
+    font-weight: bold;
+    margin-bottom: 20px;  
+    font-family: 'Fjalla One', sans-serif;
+}
+
+img {
+    width:130px;
+    height: 80px;
+    border-radius: 10px;  
+    margin-bottom: 20px;  
+}
+
+ul {
+    list-style-image: url('./assets/imgs/checkmark.svg');
+      
+}
+
+button {
+    width: 70px;
+    background-color: #8FD620;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    color: #fff;
+    margin-top: 10px;
+    font-size: 12px;
+    
+    
+}
+
+.roteiro-incluso {
+    max-width:120px;
+    display: flex;
+    flex-direction: column;
+    color: #7639BF;  
+    padding-left: 30px;
+    
+}
+
+
+.roteiro-preco {
+    color: #3c087a;
+    font-weight: 900;
+    margin-top: 20px;
+}
+
+.roteiro-obs {
+    color: #2a025c;
+    font-size: 10px;
+    text-align: center;
+}
+
+.roteiro-parcelamento {
+    color: #7639BF;
+    font-size: 10px;
+    text-align: center;
+}
+
+@media (max-width:1200px)  {
+    .container-destinos {
+        flex-wrap: wrap;
+        width: 200px;
+                 
+    }
+}
