@@ -39,14 +39,13 @@ function inserirRoteiro() {
     
     const preco = document.createElement('div');
     preco.classList.add('roteiro-preco');
-    preco.textContent = precoInput.value;
+    preco.textContent ="R$ " + precoInput.value;
     novoRoteiro.appendChild(preco);
 
    
     const containerDestinos = document.querySelector('.container-destinos');
     containerDestinos.appendChild(novoRoteiro);
-
-   
+      
     destinoInput.value = '';
     precoInput.value = '';
     inclusoesInput.value = '';
