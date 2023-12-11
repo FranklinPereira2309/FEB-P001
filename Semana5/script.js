@@ -38,14 +38,12 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 function pegarDadosApi() {
     return __awaiter(this, void 0, void 0, function () {
-        var apiKey, keyword, response, data, error_1;
+        var response, data, error_1;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
                     _a.trys.push([0, 3, , 4]);
-                    apiKey = '0611d6be8e7e4d55a51edc9f9d35c2c3';
-                    keyword = 'academic';
-                    return [4 /*yield*/, fetch("https://newsapi.org/v2/everything?q=".concat(keyword, "&apiKey=").concat(apiKey))];
+                    return [4 /*yield*/, fetch("http://servicodados.ibge.gov.br/api/v3/noticias/?tipo=noticia?qtd=1")];
                 case 1:
                     response = _a.sent();
                     return [4 /*yield*/, response.json()];
@@ -61,6 +59,34 @@ function pegarDadosApi() {
         });
     });
 }
+function pegarDadosTempo() {
+    return __awaiter(this, void 0, void 0, function () {
+        var apiKey, lat, lon, response, data, erro_1;
+        return __generator(this, function (_a) {
+            switch (_a.label) {
+                case 0:
+                    apiKey = 'dcb9330c595ad9c592bbc318dedc757b';
+                    lat = -14.796580070830135;
+                    lon = -39.17338240445384;
+                    _a.label = 1;
+                case 1:
+                    _a.trys.push([1, 4, , 5]);
+                    return [4 /*yield*/, fetch("http://api.openweathermap.org/data/2.5/weather?lat=".concat(lat, "&lon=").concat(lon, "&units=metric&appid=").concat(apiKey))];
+                case 2:
+                    response = _a.sent();
+                    return [4 /*yield*/, response.json()];
+                case 3:
+                    data = _a.sent();
+                    return [2 /*return*/, data];
+                case 4:
+                    erro_1 = _a.sent();
+                    console.log("Erro na chamdada da Api: ", erro_1);
+                    return [3 /*break*/, 5];
+                case 5: return [2 /*return*/];
+            }
+        });
+    });
+}
 function exibirNoticias() {
     return __awaiter(this, void 0, void 0, function () {
         var data, containerLists, i;
@@ -69,11 +95,10 @@ function exibirNoticias() {
                 case 0: return [4 /*yield*/, pegarDadosApi()];
                 case 1:
                     data = _a.sent();
-                    console.log(data.articles);
                     containerLists = document.querySelector('.noticias');
-                    for (i = 0; i < 3; i++) {
+                    for (i = 0; i < 1; i++) {
                         if (containerLists) {
-                            containerLists.innerHTML += "<li>\n        <h4>".concat(data.articles[i].title, "</h4>\n        <p>").concat(data.articles[i].description, "</p>\n      </li>");
+                            containerLists.innerHTML += "<li>\n        <h6>".concat(data.items[i].titulo, "</h6>\n        <p>").concat(data.items[i].introducao, "</p>\n      </li>");
                         }
                     }
                     return [2 /*return*/];
@@ -81,4 +106,27 @@ function exibirNoticias() {
         });
     });
 }
+function mostrarOtempo() {
+    return __awaiter(this, void 0, void 0, function () {
+        var temperatura, humidade, maxTemperatura, minTemperatura, data;
+        return __generator(this, function (_a) {
+            switch (_a.label) {
+                case 0:
+                    temperatura = document.querySelector('.temperatura');
+                    humidade = document.querySelector('.humidade');
+                    maxTemperatura = document.querySelector('.maxTemp');
+                    minTemperatura = document.querySelector('.minTemp');
+                    return [4 /*yield*/, pegarDadosTempo()];
+                case 1:
+                    data = _a.sent();
+                    temperatura.innerText = parseInt(data.main.temp).toString();
+                    humidade.innerText = data.main.humidity.toString();
+                    maxTemperatura.innerText = parseInt(data.main.temp_max).toString();
+                    minTemperatura.innerText = parseInt(data.main.temp_min).toString();
+                    return [2 /*return*/];
+            }
+        });
+    });
+}
 exibirNoticias();
+mostrarOtempo();
