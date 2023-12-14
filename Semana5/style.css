@@ -10,6 +10,11 @@
 h1, h2, h3 {
     font-family: 'Nunito Sans', sans-serif;
 }
+
+
+p {
+    font-size: 10px;
+}
 span {
     background-color: lightcyan;
     font-family: 'Montserrat', sans-serif;
@@ -29,6 +34,7 @@ nav {
 .noticias {
     background-color: blueviolet;
     grid-row: 2 / 5;
+    list-style: none;
 }
 
 .destaque {
@@ -46,11 +52,22 @@ nav {
     height: 100px;
 }
 
-.servicos {
+.servicos, 
+.temperatura,
+.humidade,
+.maxTemp,
+.minTemp,
+.amarela
+{
+   
     background-color: orange;
     grid-row: 5 /8;
     grid-column: 1 /2;   
     
+}
+
+.imgTemp {
+    display: flex;
 }
 
 .resultados {
@@ -59,7 +76,10 @@ nav {
     grid-column: 2 /-1;
     grid-row: 5 / 8;
 }
-
+.imgTemp {
+    width: 20px;
+    height: 20px;
+}
 footer {
     background-color: blue;
     grid-row: 8/-1;
@@ -131,4 +151,6 @@ footer {
         grid-column: 1;
         
     }
+
+    
 }

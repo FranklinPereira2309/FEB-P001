@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+.container-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+}
+
+.info1,
+.info2 {
+    width: 40%;
+}
+.info3 {
+    width: 20%;
+}
+
+.container-info2 {
+    display: flex;
+}
+
+.infor1 {
+    width: 40%;
+}
+.infor2 {
+    width: 60%;
+}
