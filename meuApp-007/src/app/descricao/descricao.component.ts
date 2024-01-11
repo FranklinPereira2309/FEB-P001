@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-descricao',
@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrl: './descricao.component.css'
 })
 export class DescricaoComponent {
+  @Input() veiculo:any;
+  @Output() descricaoSelecionada = new EventEmitter<any[]>();
 
+  selecionarDescricao(descricao: any[]) {
+    console.log(descricao);
+    this.descricaoSelecionada.emit(descricao);
+  }
+
+ 
 }

@@ -1,8 +1,11 @@
 <main class="main">
-  <app-categorias></app-categorias>
-  <app-veiculo></app-veiculo>
-  <app-descricao></app-descricao>
+
+  <app-categorias [categoriasVeiculos]="veiculos" (categoriaSelecionada)="selectCategoria($event)"></app-categorias>
+  <app-veiculo [arrVeiculo]="selectedCategoriaVeiculos" (veiculoSelecionado)="selectVeiculos($event)"></app-veiculo>
+  <!-- <app-veiculo veiculoData="veiculos" (selectedVeiculo)="onSelectVeiculos($event)"></app-veiculo> -->
+  <app-descricao [veiculo]="veiculoSelecionado"></app-descricao>
   <app-resumo></app-resumo>
+
 </main>
 
 

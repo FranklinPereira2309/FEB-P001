@@ -1,3 +1,8 @@
-<div class="container-veiculo">
-    <button>{{veiculoData}}</button>
+<div class="container-veiculo">   
+    <div *ngIf="arrVeiculo != null">
+        <div *ngFor="let veiculo of arrVeiculo">  
+            <button (click)="selecionarVeiculo(veiculo)">{{veiculo.Name}}</button>
+        </div>     
+    </div>
+    
 </div>

@@ -9,11 +9,12 @@ import { Observable } from 'rxjs';
 })
 export class JsonLoaderService {
 
-  private local = './veiculos.json';  
+  private local = 'assets/veiculos.json';  
 
   constructor(private http: HttpClient) {}
 
   getJsonData(): Observable<any[]> {
     return this.http.get<any[]>(this.local);
   }
+  
 }
