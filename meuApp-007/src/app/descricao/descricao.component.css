@@ -1,4 +1,5 @@
 .container-descricao {
     min-width: 200px;
     background-color: azure;
+    padding: 20px;
 }

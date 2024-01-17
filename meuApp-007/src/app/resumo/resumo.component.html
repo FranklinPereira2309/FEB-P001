@@ -1,13 +1,19 @@
 <div class="container-main">
-    <div class="container-resumo">
-        <div *ngIf="resumo != null">
-            <div *ngFor="let res of resumo">            
+    <div class="container-middle">
+        <span>Resumo:</span>
+
+        <div class="container-resumo">
+            <div *ngIf="resumo != null">
+                <div *ngFor="let res of resumo">            
                     <span>{{res}}</span>               
+                </div>
             </div>
         </div>
     </div>
     <div class="container-botao">
-        <button>Adicionar</button> 
+        <div>
+            <button class="laranja bntPadrao">Adicionar</button> 
+        </div>
     </div>
 
 </div>

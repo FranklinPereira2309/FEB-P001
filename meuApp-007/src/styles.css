@@ -1,3 +1,22 @@
+.bntPadrao {
+    border: none;
+    padding: 10px;
+    margin-bottom:10px;
+    color: #fff;
+    
+}
+
 .laranja {
+       
     background-color: orangered;
+    
+}
+
+.purpure {
+    background-color: darkorchid;    
+
+}
+
+.blue {
+    background-color: blue;
 }
