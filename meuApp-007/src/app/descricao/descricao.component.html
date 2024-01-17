@@ -1,7 +1,10 @@
 <div class="container-descricao">
-    <div *ngIf="veiculo != null">
-        <button>{{veiculo.Name}}</button>    
+    <div>
+        <button class="laranja">Descrição</button>
     </div>
-    <button>Descrição</button>
+    <div *ngIf="veiculo != null">        
+            <button (click)="pegarDescricao(veiculo.Name)">{{veiculo.Name}}</button>            
+    </div> 
+    
     
 </div>

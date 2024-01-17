@@ -1,3 +1,13 @@
-<div class="container-resumo">
-    <p>Supermarine spitfire</p>
+<div class="container-main">
+    <div class="container-resumo">
+        <div *ngIf="resumo != null">
+            <div *ngFor="let res of resumo">            
+                    <span>{{res}}</span>               
+            </div>
+        </div>
+    </div>
+    <div class="container-botao">
+        <button>Adicionar</button> 
+    </div>
+
 </div>

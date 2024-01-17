@@ -12,28 +12,45 @@ export class AppComponent implements OnInit{
   veiculos: any;
   selectedCategoriaVeiculos: any [] = [];
   descriptionCategorySelect: any [] = [];
+  
   veiculoSelecionado: any;
+  resumoSelecionado: any;
+  descricaoSelecionada: any;
+  resumoEscolhido: any[] = [];
+  selecionarResumoEscolhido:any;
 
   constructor(private jsonLoaderService: JsonLoaderService) {}
 
   ngOnInit() {
     this.jsonLoaderService.getJsonData().subscribe((data) => {
       this.veiculos = data;
-      this.selectCategoria(this.veiculos.Avioes)
-    })
-    
+      console.log(data);
+      
+      this.onSelectCategoria(this.veiculos.Avioes)
+    })    
      
   }
 
-  selectCategoria(categoria: any){
+  onSelectCategoria(categoria: any){
     this.selectedCategoriaVeiculos = categoria;
   }
 
-  selectVeiculos(veiculo: any) {
+  onSelectVeiculos(veiculo: any) {
     this.veiculoSelecionado = veiculo;
   }
 
-  onSelectVeiculos(string: String) {
+  onSelectVeiculoDescription(veiculo: any) {
+    this.veiculoSelecionado = veiculo;
+  }
+
+  onResumoSelecionado(categoria: any){
+    this.resumoEscolhido = categoria;       
     
   }
+
+  onDescricaoSelecionada(_resumo: any){
+    this.resumoEscolhido.push(_resumo);
+  }
+
+  
 }
