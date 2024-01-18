@@ -7,13 +7,17 @@ import { Observable } from 'rxjs';
 })
 export class ApiServiceService {
 
-  
-  private apiUrl='https://www.mediawiki.org/wiki/API:Main_page';
-  
+   
+    
   constructor(private http: HttpClient) { }
 
-  consutaltarDados(): Observable<any> {
-    return this.http.get<any>(this.apiUrl);
+  consutaltarDados(value: String): Observable<any> {
+    
+    return this.http.get(`https:/pt.wikipedia.org/w/api.php?action=query&origin=*&prop=revisions&format=json&generator=search&gsrnamespace=0&formatversion=2&gsrlimit=5&gsrsearch=${value}`);
+    
+
+    //
+    // opensearch https://pt.wikipedia.org/w/api.php?action=query&origin=*&prop=revisions&search=${value}&limit=5&namespace=0&format=json&formatversion=1
   }
 
 
