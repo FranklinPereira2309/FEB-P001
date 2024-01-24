@@ -9,9 +9,10 @@ import { ApiServiceService } from '../../services/api-service.service';
 })
 export class SearchBarComponent {
 
-  valorDoInput: String = '';
+  valorDoInput: any;
   resposta : any;
   arrResposta : any[] = [];
+ 
   constructor (private apiServiceService : ApiServiceService) {}  
   
 
@@ -19,8 +20,7 @@ export class SearchBarComponent {
     this.apiServiceService.consutaltarDados(this.valorDoInput).subscribe(
       (dados) => {
         this.resposta = dados;  
-        this.arrResposta.push(...this.resposta.query.pages);       
-              
+        this.arrResposta.push(...this.resposta.query.search);                      
       },
       (erro) => {
         console.error('Erro ao consultar a API:', erro);

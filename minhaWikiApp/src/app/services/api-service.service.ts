@@ -8,16 +8,24 @@ import { Observable } from 'rxjs';
 export class ApiServiceService {
 
    
+  urlBase = 'https:/en.wikipedia.org/w/api.php';
     
   constructor(private http: HttpClient) { }
 
-  consutaltarDados(value: String): Observable<any> {
-    
-    return this.http.get(`https:/pt.wikipedia.org/w/api.php?action=query&origin=*&prop=revisions&format=json&generator=search&gsrnamespace=0&formatversion=2&gsrlimit=5&gsrsearch=${value}`);
-    
+  consutaltarDados(value: any): Observable<any> {
 
-    //
-    // opensearch https://pt.wikipedia.org/w/api.php?action=query&origin=*&prop=revisions&search=${value}&limit=5&namespace=0&format=json&formatversion=1
+    
+    return this.http.get(this.urlBase, {
+      params: {
+        action: 'query',
+        format: 'json',
+        list: 'search',
+        utf8: '1',
+        origin: '*',
+        srsearch: value
+      }
+    });     
+
   }
 
 
