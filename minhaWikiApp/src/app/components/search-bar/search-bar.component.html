@@ -8,7 +8,7 @@
         <div class="container-resultado" *ngFor="let resp of arrResposta" >            
             <h3>{{resp.title}}</h3>
             <p [innerHTML]="resp.snippet | pipeTransform">{{resp.snippet}}</p>
-            <a href="https://en.wikipedia.org/wiki?curid={{resp.pageid}}">Leia mais...</a>
+            <a href="https://en.wikipedia.org/wiki?curid={{resp.pageid}}" target="_blank">Leia mais...</a>
             <hr>
         </div>
     </div>
