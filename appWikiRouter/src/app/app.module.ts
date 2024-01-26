@@ -16,6 +16,8 @@ import { ResultadosComponent } from './components/uesc/resultados/resultados.com
 import { ServicosComponent } from './components/uesc/servicos/servicos.component';
 import { TempoComponent } from './components/uesc/tempo/tempo.component';
 import { NoticiaComponent } from './components/uesc/noticia/noticia.component';
+import { TurismoComponent } from './components/turismo/turismo.component';
+import { CardComponent } from './components/turismo/card/card.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,8 @@ import { NoticiaComponent } from './components/uesc/noticia/noticia.component';
     ServicosComponent,
     TempoComponent,
     NoticiaComponent,
+    TurismoComponent,
+    CardComponent,
     
   ],
   imports: [

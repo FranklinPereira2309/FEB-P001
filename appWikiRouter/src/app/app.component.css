@@ -1,3 +1,7 @@
 .container-main {
     display: flex;
 }
+
+.classBorderBottom {
+    border-bottom: 1px solid purple;
+}
