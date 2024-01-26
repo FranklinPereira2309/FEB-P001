@@ -28,8 +28,9 @@ export class BuscarApiComponent {
   } 
   
 
-  buscarValor() {
-    
+  buscarValor() {    
     this.consultarAPI();
+
   }
+  
 }

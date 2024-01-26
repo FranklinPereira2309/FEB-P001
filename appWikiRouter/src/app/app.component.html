@@ -1,13 +1,17 @@
 <div class="container-main">
-  <div class="turismo">
-    <a routerLink="/turismo" routerLinkActive="link-clicado" (click)="paraTurismo()">Aula 3 - Agencia de Turismo</a>
+  <h2>Home Page Angular - Residencia Tic-18</h2>  
+  <div class="container-content">
+    <div class="turismo">
+      <a routerLink="/turismo" routerLinkActive="link-clicado" (click)="paraTurismo()">Aula 3 - Agencia de Turismo</a>
+    </div>
+    <div class="uesc">
+      <a routerLink="/uesc" routerLinkActive="link-clicado" (click)="paraUesc()">Aula 5 - Página da Uesc</a>
+    </div>
+    <div class="apiwiki">
+      <a routerLink="/apiwiki" routerLinkActive="link-clicado" (click)="paraWiki()" >Aula 8 - Pesquisa wiki</a>
+    </div>
   </div>
-  <div class="uesc">
-    <a routerLink="/uesc" routerLinkActive="link-clicado" (click)="paraUesc()">Aula 5 - Página da Uesc</a>
-  </div>
-  <div class="apiwiki">
-    <a routerLink="/apiwiki" routerLinkActive="link-clicado" (click)="paraWiki()" >Aula 8 - Pesquisa wiki</a>
-  </div>
+    
 </div>
 
 <router-outlet></router-outlet>
