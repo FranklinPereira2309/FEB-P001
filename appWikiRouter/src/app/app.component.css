@@ -1,7 +1,32 @@
 .container-main {
+    width: 100%;
     display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
-.classBorderBottom {
-    border-bottom: 1px solid purple;
+.link-clicado {
+    border-bottom: 2px solid violet;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    
+}
+
+a:hover {
+    transform: scale(2);
+}
+
+.turismo {
+    width: 100%;
+}
+
+.apiwiki {
+    width: 100%;
+}
+
+.uesc {
+    width: 100%;
 }

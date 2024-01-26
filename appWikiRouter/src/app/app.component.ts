@@ -8,22 +8,40 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'appWikiRouter';
-  classBorderBottom: boolean = false;
-
+  linkClicado: boolean = false;
+    
   constructor(private rotas: Router, private rotaAtiva: ActivatedRoute) {}
 
   paraWiki() {
     this.rotas.navigate(['apiwiki']);
-    this.classBorderBottom = true;
+    
+     
+    
+       
+    
+      
+        
   }
   paraUesc() {
     this.rotas.navigate(['uesc']);
-    this.classBorderBottom = true;
+    
+    
+       
+  
+    
+    
   }
 
   paraTurismo() {
     this.rotas.navigate(['turismo']);
-    this.classBorderBottom = true;
+    
+    
+      
+  
+    
+    
   }
+
+  
 }
 
