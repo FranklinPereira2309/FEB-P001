@@ -1,0 +1,15 @@
+<div class="container-main-search">
+
+    <input [(ngModel)]="valorDoInput" type="text" id="input-buscar" >
+    <input (click)="buscarValor()" type="button" value="Buscar">
+    
+    <div class="container-main-resultado" *ngIf="resposta">
+        <h1 *ngIf="resposta">Resultados para "{{valorDoInput}}"</h1>
+        <div class="container-resultado" *ngFor="let resp of arrResposta" >            
+            <h3>{{resp.title}}</h3>
+            <p [innerHTML]="resp.snippet">{{resp.snippet}}</p>
+            <a href="https://en.wikipedia.org/wiki?curid={{resp.pageid}}" target="_blank">Leia mais...</a>
+            <hr>
+        </div>
+    </div>
+</div>
